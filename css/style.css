@@ -1,0 +1,396 @@
+<style media="screen">
+
+    body.login {
+     
+      background-color: #ddd5c3;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+    	display: table;
+    	min-height: 100vh;
+    	width: 100%;
+    	padding: 0;
+    }
+    .header-wrapper{
+    	display: table-row;
+    }
+    .wp-core-ui .button-primary {
+      color : red;
+      background-color : red;
+    }
+    #login{
+    	margin-top: 5%;
+        margin-left: 17%;
+     background: #000046;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    	position: relative;
+    	-webkit-border-radius: 5px;
+    	-moz-border-radius: 5px;
+    	-ms-border-radius: 5px;
+    	-o-border-radius: 5px;
+    	border-radius: 5px;
+    	-webkit-box-shadow: 0 0 15px rgba(0,0,0,.8);
+    	box-shadow: 0 0 15px rgba(0,0,0,.8);
+      max-width: 400px;
+    	padding: 26px 26px 6px 26px;
+    	width: 100%;
+    }
+    .login form {
+    	margin-top: 20px;
+    	margin-left: 0;
+    	padding: 0 24px 12px;
+         background-color: white;
+        border-radius: 7px;
+    	-webkit-box-shadow: none;
+    	box-shadow: none;
+    }
+    .login form .input, .login input[type="text"]{
+    	height: 48px;
+    	background: #fff;
+    	-webkit-border-radius: 5px;
+    	-moz-border-radius: 5px;
+    	-ms-border-radius: 5px;
+    	border-radius: 5px;
+    	margin-bottom: 18px;
+    	font: normal 15px "Roboto", sans-serif;
+    	color: #7f7f7f;
+    	border-color: #bdbdbd;
+    	padding-left: 27px;
+    	font-weight: normal;
+    }
+    .login input[type="submit"] {
+    	background: #fff;
+    	color: #fff;
+    	margin: 7px 0 7px;
+    	height: 46px;
+    	-webkit-border-radius: 5px;
+    	-moz-border-radius: 5px;
+    	-ms-border-radius: 5px;
+    	border-radius: 5px;
+    	font: normal 15px "Roboto", sans-serif;
+    	color: #fff;
+    	width: 100%;
+    }
+    .wp-core-ui .button-group.button-large .button, .wp-core-ui .button.button-large{
+    	height: 46px;
+    	line-height: 0;
+    	background: #008ec2;
+    }
+    .login #nav {
+    	text-align: center;
+    }
+    #login_error { display:block; }
+    /*.message { display:none; }*/
+    /*.custom-message {
+    	-moz-border-radius:3px 3px 3px 3px;
+    	border-style:solid;
+    	border-width:1px;
+    	margin:0 0 16px 8px;
+    	padding:12px;
+    }*/
+
+    #backtoblog{
+    	text-align: center;
+    }
+    .header-cell{
+    	display: table-cell;
+    	height: 100px;
+    }
+    .loginHeaderMenu{
+    	text-align: center;
+    	position: relative;
+    	z-index: 10;
+    	list-style: none;
+    	background: #333;
+
+    }
+    .loginHeaderMenu>ul>li{
+    	display: inline-block;
+    	vertical-align: top;
+    	position: relative;
+    	list-style: none;
+    }
+    .loginHeaderMenu>ul>li>a{
+    	color: #fff;
+    	text-transform: uppercase;
+    	text-decoration: none;
+    	font-size: 16px;
+    	padding: 17px 20px;
+    	display: inline-block;
+    }
+    .loginHeaderMenu>ul>li:hover>a{
+    	background: #4CAF50;
+    	color: #fff;
+    }
+    .loginHeaderMenu>ul>li>ul{
+    	position: absolute;
+    	width: 200px;
+    	padding: 0;
+    	top: 100%;
+    	left: 0;
+    	background: #fff;
+    	list-style: none;
+    	text-align: left;
+    	border-radius: 0 0 5px 5px;
+    	-webkit-box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.31);
+    	-moz-box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.31);
+    	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.31);
+    	overflow: hidden;
+    	opacity: 0;
+    	visibility: hidden;
+    }
+    .loginHeaderMenu>ul>li:hover>ul{
+    	opacity: 1;
+    	visibility: visible;
+    }
+    .loginHeaderMenu>ul>li>ul>li{
+    	font-size: 15px;
+    	color: #333;
+    }
+    .loginHeaderMenu>ul>li>ul>li>a{
+    	color: #333;
+    	padding: 10px;
+    	display: block;
+    	text-decoration: none;
+    }
+    .loginHeaderMenu>ul>li>ul>li>a:hover {
+    	background: rgba(51, 51, 51, 0.35);
+    	color: #fff;
+    }
+    .login-wrapper{
+    	display: table-row;
+    }
+    .login-cell{
+    	display: table-cell;
+    	vertical-align: middle;
+    }
+    .clear{
+    	display: none;
+    }
+    .footer-wrapper{
+    	display: table-footer-group;
+    }
+    .footer-cont{
+
+    	right: 0;
+    	bottom: 0;
+    	left: 0;
+    	text-align: center;
+    	display: table-cell;
+    	vertical-align: bottom;
+    	height: 100px;
+    }
+    .loginFooterMenu{
+    	text-align: center;
+    	background-color: rgba(0,0,0,.7);
+    }
+    .loginFooterMenu>ul{
+    	display: inline-flex;
+    }
+
+    .loginFooterMenu>ul>li{
+    	display: inline-block;
+    	padding: 18px;
+    }
+    .loginFooterMenu>ul>li:focus{
+    	outline: none;
+    	border: 0;
+    }
+    .loginFooterMenu>ul>li>a:focus{
+    	outline: none;
+    	border: 0;
+    }
+    .loginFooterMenu>ul>li>a{
+    	color: #fff;
+    	text-transform: uppercase;
+    	text-decoration: none;
+    	font-size: 14px;
+    }
+    .loginHead {
+    	width:100%;
+    	text-align: center;
+    	margin-top: 0;
+    	margin-bottom: 20px;
+    	padding: 13px 0 0;
+    	position: relative;
+    	margin: 0;
+    }
+    .loginHead p a {
+  	  text-decoration: none;
+    }
+    .loginFooter {
+    	display: table-footer-group;
+    }
+    .loginFooter p a {
+    	display: inline-block;
+    	margin: 0 5px;
+    }
+    .loginInner {
+    	margin: 0 auto;
+    	text-align: center;
+    	margin-top: 20px;
+    	margin-bottom: 0;
+    	padding: 13px 0;
+    	position: relative;
+    }
+    .copyRight{
+    	text-align: center;
+    	padding: 12px;
+    	background-color: #efefef;
+    }
+    .loginpress-show-love{
+      color: #222;
+    }
+    .loginpress-show-love a{
+      color: #263466;
+    }
+    .loginpress-show-love a:hover{
+      color: #4d5d95;
+    }
+    </style>
+
+  <style type="text/css">
+*{
+	box-sizing: border-box;
+}
+#login::after{
+    }
+
+#login{
+  
+  }
+body.login:after{
+  
+  }
+body.login {
+        	background-color: black;
+			background-repeat: repeat;
+            background-size: auto;
+            position: relative;
+}
+
+.interim-login.login h1 a{
+    width: 100px;
+  }
+
+.login h1 a {
+		
+			width: 100px;
+			height: 80px;
+			background-size: cover;  ;
+			padding-bottom: 5px;
+	
+}
+
+.wp-core-ui #login  .button-primary{
+		    background: #34bca6;
+			border-color: #bedbdb;
+				color: #ffffff;
+	}
+
+.wp-core-ui #login  .button-primary:hover{
+		background: #6e74b5;
+			border-color: #c4c4c4;
+	}
+.wp-core-ui #login .button-primary{
+  box-shadow: none;
+}
+#loginform {
+			background-color: #efefef;
+			min-height: 200px;
+			}
+
+#login {
+		}
+.login label {
+		color: #0008ad;
+	}
+
+.login form .input, .login input[type="text"] {
+				background: #ffffff;
+			color: #1ca8a8;
+	}
+
+#lostpasswordform {
+			background-color: #a0a0a0;
+	  }
+
+#registerform {
+  }
+
+
+.login .custom-message {
+
+    border-left: 4px solid #00a0d2;
+  
+		background-color: #e5e5e5;
+  
+  padding: 12px;
+  margin-left: 0;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+
+
+
+.wp-core-ui .button-primary{
+text-shadow: none;
+}
+
+input:-webkit-autofill{
+  transition: all 100000s ease-in-out 0s !important;
+  transition-property: background-color, color !important;
+}
+      .circle img{
+          display: block;
+          margin: auto;
+      }
+   <link rel="icon" href="#" type="image/x-icon">
+
+.fullscreen-video-wrap{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+}
+
+.fullscreen-video-wrap video{
+  min-height:100%;
+  min-width:100%;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+  
+    top: 0;
+   
+    min-width: 100%; 
+    min-height: 100%;
+    opacity: 1;
+    overflow: hidden;
+}
+.background-wrap {
+				position: fixed;
+				z-index: -1000;
+				
+				overflow: hidden;
+				top: 0;
+				left: 0;
+			}
+
+body{
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden;
+    color: white;
+}
+
+   
+</style>

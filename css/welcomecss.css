@@ -1,0 +1,78 @@
+
+.welcome-content{
+    margin: auto;
+    color: black;
+    margin-top: 25vh;
+    background-color: rgb(255,0,0,.2);
+    display: inline-block;
+}
+
+
+.register{
+    margin-top:9vh;
+    font-weight: bold;
+    color: brown;
+}
+.subcontent1{
+    font-size: 25px;
+    color: black;
+    margin-top: 5%;    
+    background-color: rgb(255,0,0,.1);
+    display: inline-block;
+}
+
+.subcontent2{
+    font-size: 30px;
+    color: black;
+    margin-top: 5%;   
+display: inline-block;
+        
+
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .subcontent1{
+            background-color: rgb(255,0,0,.4);
+
+    }
+    .welcome-content{
+    margin: auto;
+    color: black;
+    margin-top: 5vh;
+    background-color: rgb(255,0,0,.4);
+
+    display: inline-block;
+}
+    .subcontent2{
+        font-size: 20px;
+display: inline-block;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .subcontent1{
+        color: black;
+            background-color: rgb(255,0,0,.4);
+display: inline-block;
+    }
+    .welcome-content{
+    margin: auto;
+    color: black;
+    margin-top: 5vh;
+            background-color: rgb(255,0,0,.4);
+display: inline-block;
+    
+}
+    .subcontent2{
+        font-size: 20px;
+display: inline-block;
+    }
+}
+body {
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden;
+    background-image: url(https://images.pexels.com/photos/733857/pexels-photo-733857.jpeg?cs=srgb&dl=background-black-blank-733857.jpg&fm=jpg);
+    background-attachment: fixed;
+     background-size: cover;
+}
